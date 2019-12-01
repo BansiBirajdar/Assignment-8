@@ -10,27 +10,24 @@ def small(str):
     for i in str:
         if(i.islower()):
             print("samll fun id=",get_ident(), i)
-            #print("i=",i)
+        
 def capital(str):
     print('process id of fun:', os.getppid())
     for i in str:
         if(i.isupper()):
             print("captial fun id=",get_ident(), i)
-            #print("i=",i)
 
 def digits(str):
     print('process id of fun:', os.getppid())
     for i in str:
         if(i.isdigit()):
             print("digit fun id=",get_ident(), i)
-            #print("i=",i)
             
 def main():
     print('parent process of fun:', os.getppid())
     print('process id of fun:', os.getpid())
     str=input("enter the string")
     
-   
     t1 = Thread(target=small, args=(str,))
     t2 = Thread(target=capital, args=(str,))
     t3 = Thread(target=digits, args=(str,))
@@ -41,6 +38,7 @@ def main():
     t1.join()
     t2.join()
     t3.join()
+
 if (__name__)=="__main__":
     main()
 print('parent process of fun:', os.getppid())
