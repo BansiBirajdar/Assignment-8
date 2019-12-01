@@ -34,6 +34,7 @@ def main():
             
             t1.join()
             t2.join()
+            
     except CheckNo as error:
         print("error occured::",error)
 

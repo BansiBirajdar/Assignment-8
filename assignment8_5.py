@@ -22,6 +22,7 @@ def Dis2(lock,no):
         
 def main():
     no=int(input("Enter the no="))
+    
     print("Display the no ")
     
     lock=Lock()
