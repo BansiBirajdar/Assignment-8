@@ -27,12 +27,10 @@ def main():
     lock=Lock()
     
     thread1 = Thread(target=counter, args=(Dis1,lock,no,))
-    
     thread2 = Thread(target=counter, args=(Dis2,lock,no,))
     
     thread1.start()
     thread2.start()
-    
     thread1.join()
     thread2.join()
 

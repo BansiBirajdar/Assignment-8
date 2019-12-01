@@ -28,8 +28,10 @@ def main():
         else:
             t1=Thread(target=Even,args=(no,))
             t2=Thread(target=Odd,args=(no,))
+            
             t1.start()
             t2.start()
+            
             t1.join()
             t2.join()
     except CheckNo as error:

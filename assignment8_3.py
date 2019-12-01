@@ -25,12 +25,14 @@ def main():
     for i in range(0,no):
         n=int(input("enter the n="))
         list1.append(n)
+    
     print(list1)
     t1=Thread(target=even , args=(list1,))
     t2=Thread(target=odd , args=(list1,))
     
     t1.start()
     t2.start()
+    
     t1.join()
     t2.join()
     

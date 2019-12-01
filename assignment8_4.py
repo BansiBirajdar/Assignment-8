@@ -31,6 +31,7 @@ def main():
     t1 = Thread(target=small, args=(str,))
     t2 = Thread(target=capital, args=(str,))
     t3 = Thread(target=digits, args=(str,))
+    
     t1.start()
     t2.start()
     t3.start()
